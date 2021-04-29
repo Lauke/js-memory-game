@@ -1,5 +1,5 @@
 # js-memory-game
-Basic javascript memory game
+A basic, minecraft inspired javascript memory game
 
 ### To do
 
