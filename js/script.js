@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+  
   //card options
   const cardArray = [
     {
@@ -79,11 +80,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if(optionOneId == optionTwoId) {
       cards[optionOneId].setAttribute('src', 'img/grass-01.png')
       cards[optionTwoId].setAttribute('src', 'img/grass-01.png')
-      alert('You have clicked the same image!')
+      document.getElementById("testmessage").innerHTML = 'You have clicked the same image!';
     }
 
     else if (cardsChosen[0] === cardsChosen[1]) {
-      alert('You found a match')
+      document.getElementById("testmessage").innerHTML = 'You found a match!';
       cards[optionOneId].setAttribute('src', 'img/dirt-01.png')
       cards[optionTwoId].setAttribute('src', 'img/dirt-01.png')
       cards[optionOneId].removeEventListener('click', flipCard)
@@ -92,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       cards[optionOneId].setAttribute('src', 'img/grass-01.png')
       cards[optionTwoId].setAttribute('src', 'img/grass-01.png')
-      alert('Sorry, try again')
+      document.getElementById("testmessage").innerHTML = 'Sorry, try again!';
     }
     
     cardsChosen = []
@@ -110,7 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
     cardsChosenId.push(cardId)
     this.setAttribute('src', cardArray[cardId].img)
     if (cardsChosen.length ===2) {
-      setTimeout(checkForMatch, 500)
+      setTimeout(checkForMatch, 150)
     }
   }
 
