@@ -34,7 +34,7 @@ body {
 }
 
 .logo {
-  background: url("img/minecraft-logo.png");
+  background: url("https://lauke.github.io/js-memory-game/img/minecraft-logo.png");
   background-size: contain;
   background-repeat: no-repeat;
 	background-position: center;
